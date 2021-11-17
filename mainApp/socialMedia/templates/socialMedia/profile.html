@@ -1,0 +1,108 @@
+{% extends 'socialMedia/base.html' %}
+{% load static %}
+{% block title %}Community page{% endblock %}
+{{block.super}}
+{{block.super}}
+{% block navbar %}
+{% endblock navbar %}
+{% block content %}
+<div class="container">
+<div class="row justify-content-end mt-5">
+        <div class="col-md-3 col-sm-6">
+            {% if user.is_authenticated %}
+            <a href="{% url 'community:logout' %}" class="btn btn-light float-right">Logout</a>
+            {% endif %}
+        </div>
+</div></div>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-3 col-sm-6">
+            <a href="{% url 'community:home' %}" class="btn btn-light">Back to Social Feed</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="card shadow-sm col-md-8 col-sm-12 border-bottom px-5 pt-3">
+
+            <img src="{{ profile.image.url }}" class="rounded-circle" width="100" height="100" />
+
+<!--            {{profile.image.url}}-->
+<!--            <img src="{% static 'socialMedia/media/profile_pics'|add:profile.image.url %}" class="rounded-circle" width="100" height="100" />-->
+            {% if profile.name %}
+            <h3 class="py-4">{{ profile.name }}
+                
+                <span>
+                    {% if request.user == user %}
+                        <a href="{% url 'community:profile-edit' user.id %}" style="color: #333"><i class="far fa-edit"></i></a>
+                    {% endif %}
+                </span>
+                {% else %}
+                <h3 class="py-4">{{ user.username }}
+                    <span>
+                        {% if request.user == user %}
+                            <a href="{% url 'community:profile-edit' user.id %}" style="color: #333"><i class="far fa-edit"></i></a>
+                        {% endif %}
+                    </span>
+                </h3>
+                {% endif %}
+            </h3>
+            <a class="left_text hover-grey" href="{% url 'community:bookmark_list' %}">Bookmarked Posts</a>
+            
+
+            {% if profile.bio %}
+            <p>{{ profile.bio }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+            
+
+    {% for post in posts %}
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-12 border-bottom position-relative">
+            <a
+            ><img
+              src="{{ post.author.profile.image.url }}"
+              class="rounded-circle"
+              width="30"
+              height="30"
+              alt=""
+            /></a>
+            <p>
+                {% if post.author.profile.name %}
+                    <strong>{{ post.author.profile.name }}</strong>
+                {% else %}
+                    <strong>{{ post.author.profile.user }}</strong>
+                {% endif %}
+            {{ post.pub_date }}</p>
+            <div class = "position-relative">
+             <p class = "left_text_wrap">{{ post.content }}</p>
+             <a href="{% url 'community:post-detail' post.pk %}" class="stretched-link"></a>
+            </div>
+
+            <div class="d-flex flex-row">
+                <form method="POST" action="{% url 'community:like' post.pk %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button style="background-color: transparent; border: none; box-shadow: none;" type="submit">
+                        <i class="far fa-thumbs-up"> <span>{{ post.likes.all.count }}</span></i>
+                    </button>
+                </form>
+
+                <form method="POST" action="{% url 'community:dislike' post.pk %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button style="background-color: transparent; border: none; box-shadow: none;" type="submit">
+                        <i class="far fa-thumbs-down"> <span>{{ post.dislikes.all.count }}</span></i>
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    {% endfor %}
+
+
+</div>
+{% endblock content %}
+{{block.super}}

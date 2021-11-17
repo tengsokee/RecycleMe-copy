@@ -1,0 +1,1306 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "map/.external-ecmascript.js",
+    "static": true,
+    "longname": "map/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "map/js/search_nearest_points.js",
+    "content": "/**\n * This function gets the nearest recycling points from a point\n * @param {double} lat - this is the latitude of a location from which to find nearest point\n * @param {double} long - this is the longitude of a location from which to find nearest point\n * @param {(double)|array} recyclingpoints_list - list of latitude and longitude of recycling points to search from\n * @return {((double|array)|array)} - a list of [latitude, longitude] of the nearest points\n */\nfunction getNearestRecyclingPoints(lat,long,recyclingpoints_list) {\n\n  lookup = sphereKnn(\n    /* This array needs to be full of objects that have latitudes and\n    * longitudes. Accepted property names are \"lat\", \"latitude\", \"lon\",\n    * \"lng\", \"long\", \"longitude\". */\n    /* You can also use an array. */\n    recyclingpoints_list\n  );\n  //lookup(latitude,longitude,maxResults,maxDistance)\n  var points = lookup(lat, long, 10)\n  return points;\n}\n/**\n * This function processes the output from {@link getNearestRecyclingPoints} to return a dictionary of recycling points.\n* @param {list[]} recyclingpoints - list containing the fields of each recycling point as one object\n* @return {list[list[],dictionary]} - a list of [list[],dictionary]. The first item is a list [float latitude, float longitude]. The second item is a dictionary with [float latitude, float longitude] as key and an object containing fields for a recycling point as the value. \n*/\nfunction preprocessRecyclingPoints(recyclingpoints) {\n  recyclingpoints_lat_long = []\n  recyclingpoints_dict = {}\n  for(i=0;i<recyclingpoints.length;i++) {\n    lat_long = [parseFloat(recyclingpoints[i][\"fields\"][\"latitude\"]),parseFloat(recyclingpoints[i][\"fields\"][\"longitude\"])]\n    recyclingpoints_lat_long.push(lat_long);\n    if(recyclingpoints_dict[lat_long]==undefined) {\n      recyclingpoints_dict[lat_long]=[recyclingpoints[i]];\n    }\n    else {\n      recyclingpoints_dict[lat_long].push(recyclingpoints[i]);\n    }\n  }\n  return [recyclingpoints_lat_long,recyclingpoints_dict];\n}\n\n\n/**\n * These functions retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\n\"use strict\";\n      rad              = Math.PI / 180;\n      invEarthDiameter = 1 / 12742018 /* meters */;\n\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction sphereKnn(points) {\n  /* Inflate the toad! */\n  var root = spherekd_build(points)\n\n  /* Lurch off into the sunset! */\n  return function(lat, lon, n, max) {\n    return spherekd_lookup(lat, lon, root, n, max)\n  }\n}\n      \n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction spherical2cartesian(lat, lon) {\n  lat *= Math.PI / 180;\n  lon *= Math.PI / 180;\n  const cos = Math.cos(lat);\n  return [cos * Math.cos(lon), Math.sin(lat), cos * Math.sin(lon)]\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nclass Position {\n  /**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\n  constructor(object) {\n    let lat = NaN,\n        lon = NaN;\n\n    if(Array.isArray(object)) {\n      lat = object[0];\n      lon = object[1];\n    }\n\n    else if(object.hasOwnProperty(\"location\")) {\n      lat = object.location[0];\n      lon = object.location[1];\n    }\n\n    else if(object.hasOwnProperty(\"position\")) {\n      lat = object.position[0];\n      lon = object.position[1];\n    }\n\n    else if(object.hasOwnProperty(\"geometry\") &&\n            object.geometry.hasOwnProperty(\"type\") &&\n            object.geometry.type === \"Point\") {\n      lat = object.geometry.coordinates[1];\n      lon = object.geometry.coordinates[0];\n    }\n\n    else {\n      if(object.hasOwnProperty(\"lat\")) {\n        lat = object.lat;\n      }\n      else if(object.hasOwnProperty(\"latitude\")) {\n        lat = object.latitude;\n      }\n\n      if(object.hasOwnProperty(\"lon\")) {\n        lon = object.lon;\n      }\n      else if(object.hasOwnProperty(\"lng\")) {\n        lon = object.lng;\n      }\n      else if(object.hasOwnProperty(\"long\")) {\n        lon = object.long;\n      }\n      else if(object.hasOwnProperty(\"longitude\")) {\n        lon = object.longitude;\n      }\n    }\n        /**\n     * @type {object}\n     */\n    this.object   = object;\n      /**\n     * @type {(double)|array}\n     */\n    this.position = spherical2cartesian(lat, lon);\n  }\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\n  static create(object) {\n    return new Position(object);\n  }\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\n  static extract(position) {\n    return position.object;\n  }\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction spherekd_build(array) {\n  return kd_build(array.map(Position.create));\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction spherekd_lookup(lat, lon, node, n, max) {\n  return kd_lookup(\n      spherical2cartesian(lat, lon),\n      node,\n      n,\n      max > 0 ? 2 * Math.sin(max * invEarthDiameter) : undefined\n    ).\n    map(Position.extract);\n}\n\n\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction Node(axis, split, left, right) {\n  this.axis  = axis\n  this.split = split\n  this.left  = left\n  this.right = right\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction distance(a, b) {\n  var i = Math.min(a.length, b.length),\n      d = 0,\n      k\n\n  while(i--) {\n    k  = b[i] - a[i]\n    d += k * k\n  }\n\n  return d\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction byDistance(a, b) {\n  return a.dist - b.dist\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction buildrec(array, depth) {\n  /* This should only happen if you request a kd-tree with zero elements. */\n  if(array.length === 0)\n    return null\n\n  /* If there's only one item, then it's a leaf node! */\n  if(array.length === 1)\n    return array[0]\n\n  /* Uh oh. Well, we have to partition the data set and recurse. Start by\n   * finding the bounding box of the given points; whichever side is the\n   * longest is the one we'll use for the splitting plane. */\n  var axis = depth % array[0].position.length\n\n  /* Sort the points along the splitting plane. */\n  /* FIXME: For very large trees, it would be faster to use some sort of median\n   * finding and partitioning algorithm. It'd also be a lot more complicated. */\n  array.sort(function(a, b) {\n    return a.position[axis] - b.position[axis]\n  })\n\n  /* Find the median point. It's position is going to be the location of the\n   * splitting plane. */\n  var i = Math.floor(array.length * 0.5)\n\n  /* Split, recurse, yadda yadda. */\n  ++depth\n\n  return new Node(\n    axis,\n    array[i].position[axis],\n    buildrec(array.slice(0, i), depth),\n    buildrec(array.slice(i   ), depth)\n  )\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction kd_build(array) {\n  return buildrec(array, 0)\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction kd_lookup(position, node, n, max) {\n  if(!(max > 0))\n    max = Number.POSITIVE_INFINITY\n\n  var array = []\n\n  /* Degenerate cases. */\n  if(node === null || n <= 0)\n    return array\n\n  var stack = [node, 0],\n      dist, i\n\n  while(stack.length) {\n    dist = stack.pop()\n    node = stack.pop()\n\n    /* If this subtree is further away than we care about, then skip it. */\n    if(dist > max)\n      continue\n\n    /* If we've already found enough locations, and the furthest one is closer\n     * than this subtree possibly could be, just skip the subtree. */\n    if(array.length === n && array[array.length - 1].dist < dist * dist)\n      continue\n\n    /* Iterate all the way down the tree, adding nodes that we need to remember\n     * to visit later onto the stack. */\n    while(node instanceof Node) {\n      if(position[node.axis] < node.split) {\n        stack.push(node.right, node.split - position[node.axis])\n        node = node.left\n      }\n\n      else {\n        stack.push(node.left, position[node.axis] - node.split)\n        node = node.right\n      }\n    }\n\n    /* Once we've hit a leaf node, insert it into the array of candidates,\n     * making sure to keep the array in sorted order. */\n    dist = distance(position, node.position)\n    if(dist <= max * max)\n      binary_insert({object: node, dist: dist}, array, byDistance)\n\n    /* If the array's too long, cull it. */\n    if(array.length > n)\n      array.pop()\n  }\n\n  /* Strip candidate wrapper objects. */\n  i = array.length\n\n  while(i--)\n    array[i] = array[i].object\n\n  return array\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction defaultComparator(a, b) {\n  return a - b\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction binary_search (item, array, comparator) {\n  if(!comparator)\n    comparator = defaultComparator\n\n  var low  = 0,\n      high = array.length - 1,\n      mid, comp\n\n  while(low <= high) {\n    mid  = (low + high) >>> 1\n    comp = comparator(array[mid], item)\n\n    if(comp < 0)\n      low = mid + 1\n\n    else if(comp > 0)\n      high = mid - 1\n\n    else\n      return mid\n  }\n\n  return -(low + 1)\n}\n/**\n * function retrieved from @see https://github.com/darkskyapp/sphere-knn\n*/\nfunction binary_insert(item, array, comparator) {\n  var i = binary_search(item, array, comparator)\n\n  if(i < 0)\n    i = -(i + 1)\n\n  array.splice(i, 0, item)\n}",
+    "static": true,
+    "longname": "/Users/desmondlewjiangyang/apps/RecycleMe/mainApp/map/static/map/js/search_nearest_points.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "getNearestRecyclingPoints",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~getNearestRecyclingPoints",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "This function gets the nearest recycling points from a point",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "double"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "lat",
+        "description": "this is the latitude of a location from which to find nearest point"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "double"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "long",
+        "description": "this is the longitude of a location from which to find nearest point"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "double)",
+          "array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "recyclingpoints_list",
+        "description": "list of latitude and longitude of recycling points to search from"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "(double",
+        "array)",
+        "array"
+      ],
+      "spread": false,
+      "description": "a list of [latitude, longitude] of the nearest points"
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "preprocessRecyclingPoints",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~preprocessRecyclingPoints",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "This function processes the output from {@link getNearestRecyclingPoints} to return a dictionary of recycling points.",
+    "lineNumber": 26,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "list[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "recyclingpoints",
+        "description": "list containing the fields of each recycling point as one object"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "list[list[],dictionary]"
+      ],
+      "spread": false,
+      "description": "a list of [list[],dictionary]. The first item is a list [float latitude, float longitude]. The second item is a dictionary with [float latitude, float longitude] as key and an object containing fields for a recycling point as the value."
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "sphereKnn",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~sphereKnn",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 53,
+    "params": [
+      {
+        "name": "points",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "function",
+    "name": "spherical2cartesian",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~spherical2cartesian",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 66,
+    "params": [
+      {
+        "name": "lat",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "lon",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "undefined[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "class",
+    "name": "Position",
+    "memberof": "map/js/search_nearest_points.js",
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~Position",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 75,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "map/js/search_nearest_points.js~Position",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "map/js/search_nearest_points.js~Position#constructor",
+    "access": "public",
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 79
+  },
+  {
+    "__docId__": 55,
+    "kind": "member",
+    "name": "object",
+    "memberof": "map/js/search_nearest_points.js~Position",
+    "static": false,
+    "longname": "map/js/search_nearest_points.js~Position#object",
+    "access": "public",
+    "description": "",
+    "lineNumber": 129,
+    "type": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "member",
+    "name": "position",
+    "memberof": "map/js/search_nearest_points.js~Position",
+    "static": false,
+    "longname": "map/js/search_nearest_points.js~Position#position",
+    "access": "public",
+    "description": "",
+    "lineNumber": 133,
+    "type": {
+      "nullable": null,
+      "types": [
+        "double)",
+        "array"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "create",
+    "memberof": "map/js/search_nearest_points.js~Position",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~Position.create",
+    "access": "public",
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 138,
+    "params": [
+      {
+        "name": "object",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "extract",
+    "memberof": "map/js/search_nearest_points.js~Position",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~Position.extract",
+    "access": "public",
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 144,
+    "params": [
+      {
+        "name": "position",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "function",
+    "name": "spherekd_build",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~spherekd_build",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 151,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 60,
+    "kind": "function",
+    "name": "spherekd_lookup",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~spherekd_lookup",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 157,
+    "params": [
+      {
+        "name": "lat",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "lon",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "node",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "n",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "max",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "function",
+    "name": "Node",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~Node",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 171,
+    "params": [
+      {
+        "name": "axis",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "split",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "left",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "right",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "function",
+    "name": "distance",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~distance",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 180,
+    "params": [
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "function",
+    "name": "byDistance",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~byDistance",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 195,
+    "params": [
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "name": "buildrec",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~buildrec",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 201,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "depth",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "name": "kd_build",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~kd_build",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 239,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "function",
+    "name": "kd_lookup",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~kd_lookup",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 245,
+    "params": [
+      {
+        "name": "position",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "node",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "n",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "max",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 67,
+    "kind": "function",
+    "name": "defaultComparator",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~defaultComparator",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 307,
+    "params": [
+      {
+        "name": "a",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "b",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "function",
+    "name": "binary_search",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~binary_search",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 313,
+    "params": [
+      {
+        "name": "item",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "comparator",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 69,
+    "kind": "function",
+    "name": "binary_insert",
+    "memberof": "map/js/search_nearest_points.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "map/js/search_nearest_points.js~binary_insert",
+    "access": "public",
+    "export": false,
+    "importPath": "./map/js/search_nearest_points.js",
+    "importStyle": null,
+    "description": "function retrieved from @see https://github.com/darkskyapp/sphere-knn",
+    "lineNumber": 340,
+    "params": [
+      {
+        "name": "item",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "comparator",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "kind": "index",
+    "content": "# RecycleMe\n\n###1\nInstall dependencies for project. \nchange to source directory, and run pipenv install -r requirements.txt or pip install -r requirements.txt\nP.S. MySQL and its associated modules may not be installed. Install from the MySQL site or OS-specific package managers. Use a dependencies manager like pipenv or virtual env to separate modules dependencies for different projects.\n\n###2\nstart mysql server using command prompt and connect using root user. Create database named 'RecycleMe'. Create mysql user with name 'recycleme' and password 'Recycleme@123'\n\n###3\nAssuming you are at root directory, run \nmysql -u username -p -h localhost recycleme<recycleme.sql to import the database data. \nP.S. replace username with your MySQL username.\n\n###4\nRun manage.py in RecycleMe/mainApp with command \"python manage.py runserver\" and go to http://localhost:8000/community/<url in urls.py> for social media webpages and http://localhost:8000/map/<url in urls.py> for the map\nEg:\nhttp://localhost:8000/community/\nhttp://localhost:8000/community/\n\n",
+    "longname": "/Users/desmondlewjiangyang/apps/RecycleMe/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
+    "longname": "/Users/desmondlewjiangyang/apps/RecycleMe/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+{% load additional_templates %}
+<head>
+  <meta charset="utf-8" />
+  <script src="https://kit.fontawesome.com/8bdb957246.js" crossorigin="anonymous"></script>
+  <!--Link to stylesheet css-->
+  <link rel="stylesheet" type="text/css" href="{% static 'map/styles.css' %}" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <title>{% block title %}RecycleMe{% endblock %}</title>
+
+  <!--Other configuration data for rendering or searching the website-->
+  {% block tags %}
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  {% endblock %}
+  <meta name="author" content="" />
+  {% block header_tags %}
+  
+  {% endblock %}
+</head>
+
+<body>
+
+{% block content %}
+{% block navbar%}
+<div class="header_bar_fixed_small_right nav_bar_position">RecycleMe</div>
+<div class = "header_nav">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:transparent !important;">
+    <button class="navbar-toggler" style="color: black !important;" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color: black !important;"></span>
+    </button>
+    <div class="collapse navbar-collapse"  id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <nav class="navbar navbar-light bg-light" style="background-color:transparent !important;">
+            <form class="form-inline" method="GET">
+              <input class="form-control mr-sm-2 searchBar" type="search" name="search" id = "searchBar" autocomplete="on"
+              {% if search_bar_message == "" %}
+              placeholder="Search by postal code" 
+              {% elif search_bar_message == "valid" %}
+              placeholder="{{postalcode}}"
+              {% else %}
+              placeholder="{{search_bar_message}}"
+              {% endif %}
+              aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" style="background-color:lightgrey !important;" type="submit">Search</button>
+              <a class="btn btn-outline-success my-2 my-sm-0" style="background-color:lightgrey !important;" href = "{% url 'map:map' %}">Display all points</a>
+            </form>
+          </nav>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="font-size:20px;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filters
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-item">
+              <input type="checkbox" class="gaucher" id="1" name="gaucher[]" onchange="processCheck(this)" checked>
+              <label for="category1"> Cash For Trash</label><br>
+            </div>
+            <div class="dropdown-item">
+              <input type="checkbox" class="gaucher" id="2" name="gaucher[]" onchange="processCheck(this)" checked>
+              <label for="category2"> 2nd Hand Goods</label><br>
+            </div>
+            <div class="dropdown-item">
+              <input type="checkbox" class="gaucher" id="3" name="gaucher[]" onchange="processCheck(this)" checked>
+              <label for="category3"> E-Waste</label><br>
+            </div>
+            <div class="dropdown-item">
+              <input type="checkbox" class="gaucher" id="4" name="gaucher[]" onchange="processCheck(this)" checked>
+              <label for="category4"> Lighting Waste</label>	
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="nav_bar clearfix nav_bar_position">
+  <a href="{% url 'map:map' %}" class="left_30_box hover-grey nav_bar_position">
+    <div class="box_icon red nav_bar_position">
+      <i class="fas fa-map-marker-alt"></i>
+    </div>
+  </a>
+  <a 
+  {% if request.user.is_authenticated %}
+  href="{% url 'community:home' %}" 
+  {% else %}
+  href="{% url 'community:loginPage' %}"
+  {% endif %}
+  class="left_30_box hover-grey nav_bar_position">
+    <div class="box_icon yellow nav_bar_position">
+      <i class="fas fa-users nav_bar_position"></i>
+    </div>
+  </a>
+  <a 
+  {% if request.user.is_authenticated %}
+  href="{% url 'community:profile' user.pk %}" 
+  {% else %}
+  href="{% url 'community:loginPage' %}"
+  {% endif %}
+  class="left_30_box hover-grey nav_bar_position">
+    <div class="box_icon green nav_bar_position">
+      <i class="fas fa-user nav_bar_position"></i>
+    </div>
+  </a>
+</div>
+{%endblock%}
+{% endblock %}
+
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+{% extends 'socialMedia/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Community page{% endblock %}
+{{block.super}}
+{{block.super}}
+{% block navbar %}
+{% endblock navbar %}
+{% block content %}
+<div class="container">
+<div class="row justify-content-end mt-5">
+        <div class="col-md-3 col-sm-6">
+            {% if user.is_authenticated %}
+            <a href="{% url 'community:logout' %}" class="btn btn-light float-right">Logout</a>
+            {% endif %}
+        </div>
+</div></div>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-3 col-sm-6">
+            <a href="{% url 'community:home' %}" class="btn btn-light">Back to Social Feed</a>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-12 border-bottom">
+             <a
+            ><img
+              src="{{ post.author.profile.image.url }}"
+              class="rounded-circle"
+              width="30"
+              height="30"
+              alt=""
+             /></a>
+            <p>
+                {% if post.author.profile.name %}
+                    <strong>{{ post.author.profile.name }}</strong>
+                {% else %}
+                    <strong>{{ post.author.profile.user }}</strong>
+                {% endif %} {{ post.pub_date }}
+                {% if request.user == post.author %}
+                    <a href="{% url 'community:post-edit' post.pk %}" style="color: #333;"><i class="far fa-edit"></i></a>
+                    <a href="{% url 'community:post-delete' post.pk %}" style="color: #333;"><i class="fas fa-trash-alt"></i></a>
+                {% endif %}
+            </p>
+            <p class = "left_text_wrap">{{ post.content }}</p>
+            <div class="btn-group">
+                <form method="POST" action="{% url 'community:like' post.pk %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button style="background-color: transparent; border: none; box-shadow: none;" type="submit">
+                        <i class="far fa-thumbs-up"> <span>{{ post.likes.all.count }}</span></i>
+                    </button>
+                </form>
+                <form method="POST" action="{% url 'community:dislike' post.pk %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button style="background-color: transparent; border: none; box-shadow: none;" type="submit">
+                        <i class="far fa-thumbs-down"> <span>{{ post.dislikes.all.count }}</span></i>
+                    </button>
+                </form>
+                <form method="POST" action="{% url 'community:bookmark_post' post.pk %}">
+                    {% csrf_token %}
+
+                    {% if is_bookmarked %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button style="background-color: transparent; border: none; box-shadow: none;" type="submit">
+                        <i class="fas fa-bookmark"><span></span></i>
+                    </button>
+
+                    {% else %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button style="background-color: transparent; border: none; box-shadow: none;" type="submit">
+                        <i class="far fa-bookmark"><span></span></i>
+                    </button>
+
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row">
+
+            </div>
+        </div>
+
+
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-12">
+            <h5>Add a Comment!</h5>
+        </div>
+    </div>
+
+    
+    <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-md-5 col-sm-12">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success mt-3">Comment!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% for comment in comments %}
+    <div class="row justify-content-center mt-3 mb-5 border-bottom">
+        <div class="col-md-5 col-sm-12">
+            <p>
+                {% if comment.author.profile.name %}
+                    <strong>{{ comment.author.profile.name }}</strong>
+                {% else %}
+                    <strong>{{ comment.author.profile.user }}</strong>
+                {% endif %}
+                 {{ comment.pub_date }}
+                {% if request.user == comment.author %}
+                    <a href="{% url 'community:comment-delete' post.pk comment.pk %}" style="color: #333;"><i class="fas fa-trash"></i></a>
+                {% endif %}
+            </p>
+            <p class = "left_text_wrap">{{ comment.content }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>  
+<script>
+    var post_error = "{{error_message|safe}}";
+    if(post_error!="" ) {
+        alert(post_error)
+    }
+</script>
+{% endblock content %}
+{{block.super}}

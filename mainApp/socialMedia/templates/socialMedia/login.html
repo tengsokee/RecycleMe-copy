@@ -1,0 +1,39 @@
+{% extends "socialMedia/base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Log In</h2>
+<form method="post", action ="">
+  {% csrf_token %}
+
+  <div class="input-group mb-3">
+    <div class="input-group-append">
+      <label>Username</label>
+      <span class="input-group-text"><i class="fas fa-user"></i></span>
+    </div>
+<!--  {{ form.username.label }}-->
+    <input type="text" name="username" placeholder="Username..." class="form-control">
+  </div>
+<!--  {{ form.password.label }}-->
+
+  <div class="input-group mb-2">
+    <div class="input-group-append">
+      <label>Password</label>
+      <span class="input-group-text"><i class="fas fa-key"></i></span>
+    </div>
+
+    <input type="password" name="password" placeholder="Password..." class="form-control" >
+  </div>
+
+{% for message in messages %}
+					<p id="messages">{{message}}</p>
+  {% endfor %}
+  <button type="submit">Log In</button>
+  <div class="mt-4">
+    <div class="d-flex justify-content-center links">
+      Don't have an account? <a href="{% url 'community:register' %}" class="ml-2">Register</a>
+    </div>
+
+  </div>
+</form>
+{% endblock content %}

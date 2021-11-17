@@ -1,0 +1,1 @@
+{ "source":"./mainApp/map/static/map","destination":"./docs","plugins":[{"name":"esdoc-standard-plugin"}]}

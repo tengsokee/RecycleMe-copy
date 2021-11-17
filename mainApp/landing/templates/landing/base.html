@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+{% load additional_templates %}
+<head>
+  <!--to import jQuery library-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- jScroll plug-in CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>  
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!--To avoid blue links on phones-->
+  <meta name="format-detection" content="telephone=no">
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!--Google font API -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <script src="https://kit.fontawesome.com/1d71f92e0a.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8bdb957246.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https3://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <!--Link to stylesheet css-->
+  <link rel="stylesheet" type="text/css" href="{% static 'socialMedia/styles.css' %}" />
+
+  <title>{% block title %}RecycleMe{% endblock %}</title>
+
+
+
+  <!--Other configuration data for rendering or searching the website-->
+  {% block tags %}
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  {% endblock %}
+  <meta name="author" content="" />
+
+  <!--responsive meta tag for proper rendering in mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  {% block styling %}
+  
+  {% endblock %}
+</head>
+
+<body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!--navigation bar with style defined by "navbar_background"-->
+<!--email button-->
+{% block navbar %}
+<div class="header_bar_fixed_small_right nav_bar_position">RecycleMe</div>
+<div class="nav_bar clearfix nav_bar_position">
+  <a href="{% url 'map:map' %}" class="left_30_box hover-grey nav_bar_position">
+    <div class="box_icon red nav_bar_position">
+      <i class="fas fa-map-marker-alt"></i>
+    </div>
+  </a>
+  <a 
+  {% if request.user.is_authenticated %}
+  href="{% url 'community:home' %}" 
+  {% else %}
+  href="{% url 'community:loginPage' %}"
+  {% endif %}
+  class="left_30_box hover-grey nav_bar_position">
+    <div class="box_icon yellow nav_bar_position">
+      <i class="fas fa-users nav_bar_position"></i>
+    </div>
+  </a>
+  <a 
+  {% if request.user.is_authenticated %}
+  href="{% url 'community:profile' user.pk %}" 
+  {% else %}
+  href="{% url 'community:loginPage' %}"
+  {% endif %}
+  class="left_30_box hover-grey nav_bar_position">
+    <div class="box_icon green nav_bar_position">
+      <i class="fas fa-user nav_bar_position"></i>
+    </div>
+  </a>
+</div>
+{% endblock %}
+{% block content %}
+{% endblock %}
+
+</div>
+
+<script>
+// Used to toggle the menu on small screens when cli/cking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("nav");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else {
+        x.className = x.className.replace(" show", "");
+    }
+}
+</script>
+ <!-- Option 1: Bootstrap Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

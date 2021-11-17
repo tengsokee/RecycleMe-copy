@@ -1,0 +1,336 @@
+/* style sheet*/
+/*Note to this style sheet:
+if a class is responsive, then a comment with <classname>--responsive will be added before each relevant segment of the code
+*/
+/*--start*/
+/*end*/
+
+/*standard reusables for all--start*/
+/* styling for all elements */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Lato",sans-serif;
+  --header-font-size: 1.5em;
+  --font-size: 1.1em;
+  --small-font-size:0.5em;
+  --header_dummy_space: 50px;
+  font-size: var(--font-size);
+  height: auto;
+  line-height: 1.9;
+}
+
+*, * :before, * :after {
+  box-sizing: inherit;
+}
+
+/*body refers to html tag*/
+body {
+  /*variables for color*/
+  border-radius: 0;
+  margin: 0;
+  --header_color1: black;
+  --header_color2: #bf9000;
+  --header_color3: white;
+  --nav_color1: black;
+}
+
+div {
+  display: block;
+}
+
+/* Clear floats after the columns */
+.clearfix::before, .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/*For text--start*/
+.centered_text {
+  color:black;
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+  overflow:hidden;
+  text-decoration: none;
+}
+a.centered_text {
+  text-decoration: none;
+}
+.left_text {
+  color:black;
+  text-align:left;
+  vertical-align:middle;
+  white-space:normal;
+  overflow:hidden;
+  text-decoration: none;
+}
+p.body_wording {
+  font-size: --var(--small-font-size)
+}
+/*end*/
+/*end*/
+
+/*For headers--start*/
+.header_bar {
+  display: block;
+  position: fixed;
+  font-size: var(--header-font-size);
+  color: var(--black);
+  width: 100%;
+}
+.header_bar .left_60_box {
+  box-sizing: border-box;
+  text-align:left;
+  vertical-align:middle;
+  white-space:normal;
+  overflow:hidden;
+  width: 60%;
+  float: left;
+}
+.header_bar .left_60_box {
+  padding-left: 15px;
+}
+.header_bar .right_40_box {
+  padding-right: 15px;
+}
+.header_bar .right_40_box {
+  box-sizing: border-box;
+  text-align:right;
+  vertical-align:middle;
+  white-space:normal;
+  overflow:hidden;
+  width: 40%;
+  float: right;
+  color: #008b00;
+}
+.header_dummy_space {
+  padding-top:var(--header_dummy_space)
+}
+.header_bar_fixed_small_right {
+  padding-right: 15px;
+  box-sizing: border-box;
+  text-align:right;
+  vertical-align:middle;
+  white-space:normal;
+  overflow:hidden;
+  color: #008b00 !important;
+  display: block;
+  width: 150px;
+  top: 10px;
+  right:0;
+  position: fixed;
+  font-size: var(--header-font-size);
+  color: var(--black);
+}
+.header_box {
+  box-sizing: border-box;
+  text-align:center;
+  vertical-align:middle;
+  white-space:normal;
+  overflow:hidden;
+  font-size: var(--header-font-size);
+  color: var(--black);
+}
+/*end*/
+
+/*color--start*/
+.red {
+  color: #cc0303;
+}
+.yellow {
+  color: #bf9000;
+}
+.green {
+  color: #008b00;
+}
+/*end*/
+
+/*navigation bar--start*/
+.nav_bar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  color: var(--nav_color1);
+  box-shadow: 0px 0px 0.1em 0.1em #cccccc;
+  
+}
+.header_nav {
+  position: fixed;
+  left:50px;
+  width:90%;
+  z-index:10;
+  background-color: none;
+}
+.left_30_box {
+  display: block;
+  width: 33%;
+  float:left;
+  background-color: white;
+}
+.nav_bar .left_30_box .icon_container {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+.nav_bar .left_30_box .icon_container i {
+  display:inline-block;
+  width: 100%;
+  vertical-align: middle;
+  text-align:center;
+}
+.nav_bar .left_30_box.hover-grey:hover {
+  background-color: #c0c0c0;
+}
+.nav_bar .left_30_box.active {
+  background-color: #c0c0c0;
+}
+
+/*navigation bar for report--start*/
+.header_nav_bar {
+  position: fixed;
+  width: 100%;
+  top: var(--header_dummy_space);
+  color: var(--nav_color1);
+  border-bottom: 1px solid black;
+  font-size: var(--font-size);
+}
+.header_nav_bar {
+  position: fixed;
+  width: 100%;
+  top: var(--header_dummy_space);
+  color: var(--nav_color1);
+  border-bottom: 1px solid black;
+  font-size: var(--font-size);
+}
+.left_50_box {
+  display: block;
+  width: 50%;
+  float:left;
+  background-color: white;
+}
+.header_nav_bar .left_50_box.hover-grey:hover {
+  background-color: #c0c0c0;
+}
+.header_nav_bar .left_50_box.active {
+  background-color: #c0c0c0;
+}
+.nav_bar_position {
+  z-index:10;
+}
+/*end*/
+/*end*/
+
+/*For containers or box--start*/
+.float-left {
+  float:left;
+}
+.float-right {
+  float:right;
+}
+.box_100 {
+  position: static;
+  display:block;
+  width:100%;
+}
+.box_fixed_medium {
+  position: static;
+  width:200px;
+}
+.box_fixed_small {
+  position: static;
+  width: 120px;
+}
+/*end*/
+
+/*For icon containers--start*/
+.box_icon {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+.box_icon i {
+  display:inline-block;
+  width: 100%;
+  vertical-align: middle;
+  text-align:center;
+}
+/*end*/
+
+/*For icon containers--start*/
+/*end*/
+/*For callouts and buttons*/
+.btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-backface-visibility: hidden;
+  }
+/*end*/
+
+/* Responsive layout - when the screen is less than 600px wide,\
+ make the two columns stack on top of each other instead of \
+ next to each other */
+ @media (min-width: 500px) and (max-width: 768px) {
+ }
+ @media only screen 
+ and (min-device-width : 375px) 
+ and (max-device-width : 667px) 
+ and (orientation : landscape) {
+
+ }
+ @media (max-height: 450px) {
+ }
+ @media (max-width: 601px){
+ }
+ @media (max-width: 768px) {
+ }
+@media (max-width: 868px) {
+}
+@media (min-width: 301px) {
+}
+@media (min-width: 475px) {
+}
+@media (min-width: 500px) {
+}
+@media (max-width: 570px) {
+  /* . refers to a class(eg .hide-max-570 means class "hide-max-570"*/
+  .hide-max-570 {
+    display: none !important;
+  }
+}
+@media (min-width: 571px) {
+  .hide-min-570 {
+    display: none !important;
+  }
+}
+@media (min-width: 601px) {
+  /*nav_bar--responsive*/
+  .nav_bar {
+    width: 30%;
+  }
+}
+@media (min-width: 625px) {
+}
+@media (min-width: 1120px) {
+}
+@media (min-width: 769px) {
+}
+
+@media (min-width: 601px) and (max-width: 992px){
+}
+
+@media (min-width: 993px) {
+}
+@media (min-width: 1201px) {
+}

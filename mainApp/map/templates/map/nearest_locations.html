@@ -1,0 +1,321 @@
+<!--inherit template from base.html-->
+{% extends "map/base.html" %}
+{% load static %}
+<!--replace contents within each block indicated by-->
+{% block title %}Map{% endblock %}
+{% block header_tags%}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- leaflet css -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #map {
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* css to customize Leaflet default styles  */
+    .popup {
+      font-size: 11px;
+    }
+
+    .popup p {
+      margin:0;
+    }
+
+    .scrolling-wrapper {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+    }
+
+    .card {
+      display: inline-block;
+      padding: 10px;
+    }
+
+    #addphotoicon {
+      height: 50px;
+      width: 50px;
+    }
+
+    .addphotobutton {
+      position: relative;
+      height: 350px;
+      width: 200px;
+    }
+
+    .image {
+      position: relative;
+      top: 10px;
+    }
+
+    /* styling for popup form */
+  
+    /* The popup form - hidden by default */
+    .form-popup {
+      font-size: 15px;
+      display: none;
+      position: fixed;
+      bottom: 50px;
+      right: -30px;
+      background-color: white;
+      border: 3px solid #5a5a5a;
+      z-index: 9;
+      border-radius: 8px;
+      height: 280px;
+      width: 470px;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    /* Set a style for the buttons */
+    .form-container .btn {
+      background-color:rgb(0, 183, 255);
+      border: none;
+      cursor: pointer;
+      width: 30%;
+      font-size: 18px;
+      margin-top:10px;
+      margin-left:180px;
+      opacity: 0.8;
+      border-radius: 10px;
+    }
+  
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: rgb(233, 51, 51);
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+	 }
+	  
+	/* Category styling */
+	.categories {
+	position: absolute;
+	right: 5px;
+	top: 50px;
+	z-index: 1;
+	}
+}
+</style>
+{%endblock%}
+
+{%block content%}
+<body>
+    {{block.super}}
+    <div id="map" style="z-index:0;">
+    </div>
+    
+</body>
+
+</html>
+
+<!-- leaflet js-->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<!-- jquery-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="{% static 'map/js/search_nearest_points.js' %}"></script>
+
+<script>
+    /**
+     * This script searches the nearest recycling points to a postal code and displays them
+     * on a map
+     */
+    //map initialization
+    var map = L.map('map').setView([1.35027, 103.801959], 12);
+
+    // osm layer
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'});
+
+    osm.addTo(map);
+	
+    var greenOverlay = new L.layerGroup();
+    var blueOverlay = new L.layerGroup();
+    var violetOverlay = new L.layerGroup();
+    var goldOverlay = new L.layerGroup();
+    
+    var all_recyclingpoints = {{ recyclingpoints_json|safe }};
+    var recyclingpointphotos = {{ recyclingpointsphotos|safe }};
+    var postalcode = {{postalcode}};
+    
+    results = preprocessRecyclingPoints(all_recyclingpoints);
+    recyclingpoints_lat_long = results[0]
+    recyclingpoints_dict = results[1]
+
+    var points = getNearestRecyclingPoints({{lat}},{{long}},recyclingpoints_lat_long,10)
+    var recyclingpoints = [];
+    for (i = 0;i<points.length;i++) {
+      recyclingpoints_at_lat_long = recyclingpoints_dict[points[i][0]+","+points[i][1]];
+      for (point = 0; point<recyclingpoints_at_lat_long.length; point++) {
+        recyclingpoints.push(recyclingpoints_at_lat_long[point]);
+      }
+    }
+    console.log("Getting Recycling Points");
+    
+    for (let recyclingpoint in recyclingpoints) {
+      fields = recyclingpoints[recyclingpoint].fields;
+      id = recyclingpoints[recyclingpoint].pk;
+      //console.log(recyclingpoints[recyclingpoint].pk);
+      
+      photoslist = [];
+      // get recycling point photos and save url if photo id matches recycling point id
+      for (let recyclingpointphoto in recyclingpointphotos) {
+        fields2 = recyclingpointphotos[recyclingpointphoto].fields;
+        photo_id = fields2.photo_id;
+        
+        if (photo_id == id) {
+          photoslist.push(fields2.photo_url)
+          console.log(photoslist)
+        }
+      }
+
+      latitude = fields.latitude;
+      longitude = fields.longitude;
+      pointname = fields.name;
+      categories = fields.categories;
+      address = fields.address;
+      postalCode = fields.postalCode;
+      description = fields.description;
+      hyperlink = fields.hyperlink;
+
+      // 4 different icon colours
+      var greenIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      var blueIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      var violetIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      })
+
+      var goldIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      })
+
+      // function to change colour of markers
+      function determineColor(cat) {
+        if (cat == "Cash For Trash") {
+          return blueIcon;
+        }
+        else if (cat == "2nd Hand Goods") {
+          return violetIcon;
+        }
+        else if (cat == "E-Waste") {
+          return greenIcon;
+        }
+        else {
+          return goldIcon;
+        }
+      }
+
+      if (hyperlink == "") {
+        linktext = "";
+      }
+      else {
+        linktext = "<p>" + "<b> Link: </b>" + "<a href='" + hyperlink + "'>" + hyperlink + "</a>" + "</p>";
+      }
+      var pic_id = "1";
+
+      function openForm(clicked_id) {
+        document.getElementById("myForm").style.display = "block";
+        console.log(clicked_id);
+        pic_id = clicked_id;
+        console.log(pic_id);
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      
+      //html to append photos and "add a photo" form
+      photosgallery = "";
+      for (i = 0; i < photoslist.length; i++) {
+        photosgallery += "<div class='card btn' align = 'left'> <img class='image' width='300' height='300' id=photo_" + id + " src=/media/" + photoslist[i] + " alt='Recycling Point Photo'> </div>"
+      }
+      
+
+      photosgallery += "<div class='card'> <button class='addphotobutton' id=" + id + " onclick='openForm(this.id)'> <div> <img id='addphotoicon' src='../static/map/images/add.png' alt='Recycling Point Photo'> </div> Add a photo </button> <div class='form-popup' id='myForm'> <form class='form-container' method = 'post' enctype='multipart/form-data'> <input type='hidden' name='csrfmiddlewaretoken' value='{{ csrf_token }}'> <h1 style='font-size:25px'>Upload Photo</h1> <select style='display: none' name='photo_id' id='id_photo_id'> <option value="+ id + " selected>" + id + "</option> </select> <p><label for='id_photo_url'>Photo url:</label> <input type='file' name='photo_url' accept='image/*' required id='id_photo_url'></p> <div> <input type='submit' class='btn'> </div> <div> <button type='button' class='btn cancel' onclick='closeForm()'>Close</button> </div> </form> </div> </div>"
+		if (categories == "Cash For Trash") {
+			marker = L.marker([latitude,longitude], {icon: determineColor(categories)}).addTo(blueOverlay);
+			marker.bindPopup("<div class='scrolling-wrapper'>" + photosgallery + "</div>" + "<p>" + "<b> Name: </b>" + pointname + "</p>" + "<p>" + "<b> Category: </b>" + categories + "</p>" + "<p>" + "<b> Address: </b>" + address + "</p>" + "<p>" + "<b> Postal code: </b>" + postalCode+ "</p>" + "<p>" + "<b> Description: </b>" + description + "</p>" + linktext, {className: "popup", maxWidth : 370});
+			marker.closePopup();
+		}
+		
+		else if (categories == "2nd Hand Goods") {
+			marker = L.marker([latitude,longitude], {icon: determineColor(categories)}).addTo(violetOverlay);
+			marker.bindPopup("<div class='scrolling-wrapper'>" + photosgallery + "</div>" + "<p>" + "<b> Name: </b>" + pointname + "</p>" + "<p>" + "<b> Category: </b>" + categories + "</p>" + "<p>" + "<b> Address: </b>" + address + "</p>" + "<p>" + "<b> Postal code: </b>" + postalCode+ "</p>" + "<p>" + "<b> Description: </b>" + description + "</p>" + linktext, {className: "popup", maxWidth : 370});
+			marker.closePopup();
+		}
+		else if (categories == "E-Waste") {
+			marker = L.marker([latitude,longitude], {icon: determineColor(categories)}).addTo(greenOverlay);
+			marker.bindPopup("<div class='scrolling-wrapper'>" + photosgallery + "</div>" + "<p>" + "<b> Name: </b>" + pointname + "</p>" + "<p>" + "<b> Category: </b>" + categories + "</p>" + "<p>" + "<b> Address: </b>" + address + "</p>" + "<p>" + "<b> Postal code: </b>" + postalCode+ "</p>" + "<p>" + "<b> Description: </b>" + description + "</p>" + linktext, {className: "popup", maxWidth : 370});
+			marker.closePopup();
+		}
+		else {
+			marker = L.marker([latitude,longitude], {icon: determineColor(categories)}).addTo(goldOverlay);
+			marker.bindPopup("<div class='scrolling-wrapper'>" + photosgallery + "</div>" + "<p>" + "<b> Name: </b>" + pointname + "</p>" + "<p>" + "<b> Category: </b>" + categories + "</p>" + "<p>" + "<b> Address: </b>" + address + "</p>" + "<p>" + "<b> Postal code: </b>" + postalCode+ "</p>" + "<p>" + "<b> Description: </b>" + description + "</p>" + linktext, {className: "popup", maxWidth : 370});
+			marker.closePopup();
+		}
+		
+	blueOverlay.addTo(map);
+	violetOverlay.addTo(map);
+	greenOverlay.addTo(map);
+	goldOverlay.addTo(map);
+	}
+	
+	var layers = [blueOverlay, violetOverlay, greenOverlay, goldOverlay];
+	selId = null;
+	
+	  function processCheck(checkbox) {
+		var checkId = checkbox.id;
+
+		if (checkbox.checked) {
+		  layers[checkId - 1].addTo(map);
+		  selId = checkId;
+		  }
+		else {
+		  map.removeLayer(layers[checkId - 1]);
+		  selId = null;
+		}
+	}
+  var post_error = "{{error_message|safe}}";
+  if(post_error!="" ) {
+      alert(post_error)
+  }
+</script>
+{%endblock content%}
